@@ -1,5 +1,14 @@
 """This file should have our melon-type classes in it."""
 
+class Melon(object):
+    """
+        Superclass for all the different kinds of melons
+    """
+    def __init__(self, base_price=5):
+        self.base_price = base_price
+    
+    def get_base_price(self):
+        return self.base_price
 
 
 
