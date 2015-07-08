@@ -38,7 +38,7 @@ class CantaloupeOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * qty   
+        total = self.get_base_price() * qty   
         if qty >= 5:
             total *= 0.5
         return total
@@ -53,7 +53,7 @@ class CasabaOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = (1.00 + 5.00) * 1.5 * qty  
+        total = (1.00 + self.get_base_price()) * 1.5 * qty  
 
         return total
 
@@ -68,7 +68,7 @@ class SharlynOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * 1.5 * qty  
+        total = self.get_base_price() * 1.5 * qty  
 
         return total
 
@@ -82,7 +82,7 @@ class SantaClausOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * 1.5 * qty  
+        total = self.get_base_price() * 1.5 * qty  
 
         return total
 
@@ -96,7 +96,7 @@ class ChristmasOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * qty  
+        total = self.get_base_price() * qty  
 
         return total
 
@@ -110,7 +110,7 @@ class HornedMelonOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * 1.5 * qty  
+        total = self.get_base_price() * 1.5 * qty  
 
         return total
 
@@ -124,7 +124,7 @@ class XiguaOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 5.00 * 2 * 1.5 * qty  
+        total = self.get_base_price() * 2 * 1.5 * qty  
 
         return total
 
@@ -138,6 +138,6 @@ class OgenOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = (5.00 + 1.00) * qty  
+        total = (self.get_base_price() + 1.00) * qty  
 
         return total
