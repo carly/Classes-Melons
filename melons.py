@@ -1,3 +1,4 @@
+
 """This file should have our melon-type classes in it."""
 
 class Melon(object):
@@ -14,14 +15,14 @@ class Melon(object):
 
 
 class WatermelonOrder(Melon):
-    species = "Watermelon"
+    species = "Water"
     color = "green"
     imported = False
     shape = 'natural'
     seasons = ['Fall', 'Summer']
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
+        """Calculate price, given a number of Hs ordered."""
 
         total = self.get_base_price() * qty   
         if qty >= 3:
